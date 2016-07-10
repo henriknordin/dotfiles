@@ -1,0 +1,13 @@
+[user]
+	email = nordhenr@gmail.com
+	name = Henrik Nordin
+
+[alias]
+    br = branch
+    ci = commit
+    cl = clone
+    co = checkout
+    cp = cherry-pick
+    st = status
+    ls = log --pretty=format:"%C(auto)%h%Creset\\ %C(auto)%ad%Creset\\ %Cblue[%an]%Creset\\ %s%C(auto)%d%Creset"  --decorate --date=short
+    la = !git config -l | grep alias | cut -c 7-
