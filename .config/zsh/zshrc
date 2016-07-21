@@ -38,7 +38,8 @@ bindkey "^[OA" history-beginning-search-backward
 bindkey "^[OB" history-beginning-search-forward
 
 # history
-HISTFILE=~/.history
+mkdir -p $XDG_DATA_HOME/zsh     # Create folder if not existing
+HISTFILE=$XDG_DATA_HOME/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt HIST_IGNORE_ALL_DUPS     # Delete older duplicates from history
