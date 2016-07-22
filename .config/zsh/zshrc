@@ -55,6 +55,8 @@ alias ll="ls --color=auto -lh"
 alias spm="sudo pacman"
 alias cower="cower -c"
 alias diff="colordiff"
+alias tmux="tmux -f '$XDG_CONFIG_HOME'/tmux/tmux.conf"
+#export TMUX_TMPDIR="$XDG_RUNTIME_DIR"/tmux  # Keep?
 
 #zstyle ':completion:*:pacman:*' force-list always
 #zstyle ':completion:*:*:pacman:*' menu yes select
