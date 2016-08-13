@@ -1,0 +1,6 @@
+
+# In archlinux, /etc/profile is sourced from /etc/zsh/zprofile causing the $PATH
+# to be overwritten if set in .zshenv
+#
+# See https://lists.archlinux.org/pipermail/arch-general/2013-March/033108.html
+export PATH="${PATH}:${HOME}/Applications/sbt/bin:${HOME}/.local/bin"

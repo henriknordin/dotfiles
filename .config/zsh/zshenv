@@ -1,7 +1,4 @@
 
-# path
-export PATH="${PATH}:${HOME}/Applications/sbt/bin:${HOME}/.local/bin"
-
 # defaults
 export EDITOR="vim"
 export PAGER="less"
