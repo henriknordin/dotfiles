@@ -4,3 +4,5 @@
 #
 # See https://lists.archlinux.org/pipermail/arch-general/2013-March/033108.html
 export PATH="${PATH}:${HOME}/Applications/sbt/bin:${HOME}/.local/bin"
+
+# vim: ft=zsh cms=#%s

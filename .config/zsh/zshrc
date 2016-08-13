@@ -63,3 +63,4 @@ alias tmux="tmux -f '$XDG_CONFIG_HOME'/tmux/tmux.conf"
 
 #zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# vim: ft=zsh cms=#%s

@@ -10,3 +10,5 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # location of zsh config
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# vim: ft=zsh cms=#%s
