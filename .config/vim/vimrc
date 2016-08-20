@@ -1,0 +1,16 @@
+" Documentation
+" Show environment variables picked up by vim
+" :echo &t_Co
+
+" quickfixes
+set t_Co=256
+
+if filereadable(expand("~/.config/vim/vim-plug.init.vim"))
+    source ~/.config/vim/vim-plug.init.vim
+endif
+
+" Use common config for vim/neovim {
+if filereadable(expand("~/.config/vim/core.init.vim"))
+    source ~/.config/vim/core.init.vim
+endif
+
