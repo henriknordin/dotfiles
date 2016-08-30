@@ -54,9 +54,13 @@ main() {
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     create_link $dot/config/nvim .config/nvim
 
+    create_link $dot/config/redshift.conf .config/redshift.conf
+
     create_link $dot/config/termite .config/termite
 
     create_link $dot/config/tmux .config/tmux
+
+    create_link $dot/config/zsh .config/zsh
 }
 
 main "$@"
