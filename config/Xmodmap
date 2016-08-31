@@ -1,0 +1,9 @@
+
+! Let åäöÅÄÖ be available 
+keycode  24 = apostrophe quotedbl aring Aring 
+keycode  25 = comma less adiaeresis Adiaeresis 
+keycode  26 = period greater odiaeresis Odiaeresis 
+
+! Map the Mode_switch to the Super_R key
+keycode 134 = Mode_switch
+
