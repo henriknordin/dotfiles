@@ -7,3 +7,6 @@
 
 autoload/
 plugged/
+
+# zsh
+.zcompdump
