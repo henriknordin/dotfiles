@@ -60,6 +60,7 @@ main() {
 
     create_link $dot/config/tmux .config/tmux
 
+    create_link $dot/config/zsh/zshenv .zshenv
     create_link $dot/config/zsh .config/zsh
 
     create_link $dot/config/Xmodmap .Xmodmap
