@@ -40,6 +40,25 @@ error_exit() {
 }
 
 
+check_shell() {
+    if ! is_shell_default "$1"; then
+        if is_shell_available "$1"; then
+            echo "Please set shell using 'chsh -s $1'"
+        else
+            echo "$1 is not available"
+        fi
+    fi
+}
+
+is_shell_available() {
+    test "$(chsh --list-shells | grep -Fx "$1")"
+}
+
+is_shell_default() {
+    test "$1" = "$SHELL" 
+}
+
+
 # Main
 main() {
     dot="$(cd "$(dirname "$0")"; pwd)"
@@ -60,6 +79,7 @@ main() {
 
     create_link $dot/config/tmux .config/tmux
 
+    check_shell "/bin/zsh"
     create_link $dot/config/zsh/zshenv .zshenv
     create_link $dot/config/zsh .config/zsh
 
