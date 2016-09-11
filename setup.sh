@@ -61,16 +61,18 @@ is_shell_default() {
 
 # Main
 main() {
+    local vim_plug_branch="0.9.1"
+
     dot="$(cd "$(dirname "$0")"; pwd)"
 
     create_link $dot/config/git .config/git
   
-    curl -fLo "$dot/config/vim/autoload/plug.vim" --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl --silent -fLo "$dot/config/vim/autoload/plug.vim" --create-dirs \
+        "https://raw.githubusercontent.com/junegunn/vim-plug/$vim_plug_branch/plug.vim"
     create_link $dot/config/vim .config/vim
 
-    curl -fLo "$dot/config/nvim/autoload/plug.vim" --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl --silent -fLo "$dot/config/nvim/autoload/plug.vim" --create-dirs \
+        "https://raw.githubusercontent.com/junegunn/vim-plug/$vim_plug_branch/plug.vim"
     create_link $dot/config/nvim .config/nvim
 
     create_link $dot/config/redshift.conf .config/redshift.conf
