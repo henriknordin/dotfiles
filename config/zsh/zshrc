@@ -50,8 +50,14 @@ setopt EXTENDED_HISTORY         # Save time when command was entered
 setopt HIST_IGNORE_SPACE        # Line beginning with space is not saved
 
 # aliases
-alias ls="ls --color=auto -F"
-alias ll="ls --color=auto -lh"
+if [[ $(uname -s) == "Darwin" ]]; then
+    # Darwin uses bsd version of ls
+    alias ls="ls -G -F"
+    alias ll="ls -G -lh"
+else
+    alias ls="ls --color=auto -F"
+    alias ll="ls --color=auto -lh"
+fi
 alias spm="sudo pacman"
 alias cower="cower -c"
 alias diff="colordiff"
