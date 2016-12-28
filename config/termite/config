@@ -1,5 +1,7 @@
-[options]
 # see man termite.config
+
+[options]
+
 allow_bold = true
 audible_bell = false
 cursor_blink = system
@@ -7,6 +9,7 @@ cursor_shape = block
 # font = <font_name> <font_size>
 #  where <font_name> specified according to fontconfig (see fc-list)
 font = Droid Sans Mono 11
+scrollback_lines = 10000
 scroll_on_keystroke = true
 scroll_on_output = false
 
