@@ -1,0 +1,7 @@
+
+# Using display manager lightdm, .zprofile is not sourced manually. However, ~/.xprofile is sourced.
+# It is required to source the profile file in order to set e.g. the $PATH environment variable.
+# Source: https://wiki.archlinux.org/index.php/xprofile
+[ -f ~/.config/zsh/zprofile ] && source ~/.config/zsh/zprofile
+
+# vim: ft=zsh cms=#%s
