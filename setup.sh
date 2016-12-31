@@ -2,12 +2,14 @@
 #
 # Setup of configuration provided in the repo.
 
-PROGNAME=$(basename $0)
+readonly PROGNAME=$(basename $0)
+readonly PROGDIR=$(readlink -m $(dirname $0))
+readonly ARGS="$@"
 
 create_link() {
 
-    origin="$1"
-    target="$HOME/$2"
+    local origin="$1"
+    local target="$HOME/$2"
 
     if [[ "$origin" != "$(readlink $target)" ]]; then
         # Check if link should be created
@@ -61,18 +63,18 @@ is_shell_default() {
 
 # Main
 main() {
+    local vim_plug_repo="https://raw.githubusercontent.com/junegunn/vim-plug"
     local vim_plug_branch="0.9.1"
-
-    dot="$(cd "$(dirname "$0")"; pwd)"
+    local dot=$PROGDIR 
 
     create_link $dot/config/git .config/git
   
     curl --silent -fLo "$dot/config/vim/autoload/plug.vim" --create-dirs \
-        "https://raw.githubusercontent.com/junegunn/vim-plug/$vim_plug_branch/plug.vim"
+        "$vim_plug_repo/$vim_plug_branch/plug.vim"
     create_link $dot/config/vim .config/vim
 
     curl --silent -fLo "$dot/config/nvim/autoload/plug.vim" --create-dirs \
-        "https://raw.githubusercontent.com/junegunn/vim-plug/$vim_plug_branch/plug.vim"
+        "$vim_plug_repo/$vim_plug_branch/plug.vim"
     create_link $dot/config/nvim .config/nvim
 
     create_link $dot/config/redshift.conf .config/redshift.conf
@@ -89,6 +91,5 @@ main() {
 
     create_link $dot/config/xprofile .xprofile
 }
-
-main "$@"
+main
 
