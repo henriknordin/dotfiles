@@ -3,6 +3,15 @@
 # to be overwritten if set in .zshenv
 #
 # See https://lists.archlinux.org/pipermail/arch-general/2013-March/033108.html
-export PATH="${PATH}:${HOME}/Applications/sbt/bin:${HOME}/.local/bin"
+#
+# However, note that this file is only sourced by login shells. In order to set
+# the path for interactive only shells, this file needs to be sourced by .zshrc
+
+typeset -U path
+path=(
+    $HOME/.local/bin
+    $HOME/Applications/sbt/bin
+    $path[@]
+)
 
 # vim: ft=zsh cms=#%s

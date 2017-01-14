@@ -1,4 +1,11 @@
 
+# When logging in using display manager, no login shell is started. Since
+# the login shell is the only one to source .zprofile, it has to be done 
+# explicitly if the shell is only interactive
+if [[ -o interactive && ! -o login ]]; then
+    source "$ZDOTDIR"/.zprofile
+fi
+
 # completion
 autoload -U compinit && compinit
 
