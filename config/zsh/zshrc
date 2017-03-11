@@ -1,10 +1,15 @@
 
-# When logging in using display manager, no login shell is started. Since
-# the login shell is the only one to source .zprofile, it has to be done 
-# explicitly if the shell is only interactive
-if [[ -o interactive && ! -o login ]]; then
-    source "$ZDOTDIR"/.zprofile
-fi
+# PATH
+typeset -U path
+path=(
+    $HOME/bin
+    $HOME/.local/bin
+    $GRADLE_HOME/bin
+    $BUILD_TOOLS_HOME/bin
+    $ANT_HOME/bin
+    $M2_HOME/bin
+    $path[@]
+)
 
 # completion
 autoload -U compinit && compinit

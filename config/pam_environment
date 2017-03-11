@@ -1,0 +1,31 @@
+
+# defaults
+EDITOR              DEFAULT=vim
+PAGER               DEFAULT=less
+
+# xdg - https://specifications.freedesktop.org/basedir-spec/latest/
+XDG_CONFIG_HOME     DEFAULT=${HOME}/.config
+XDG_CACHE_HOME      DEFAULT=${HOME}/.cache
+XDG_DATA_HOME       DEFAULT=${HOME}/.local/share
+
+ZDOTDIR             DEFAULT=${XDG_CONFIG_HOME}/zsh
+
+
+JAVA_HOME           DEFAULT=/usr/lib/jvm/default
+
+
+GRADLE_HOME         DEFAULT=${HOME}/opt/gradle
+M2_HOME             DEFAULT=${HOME}/opt/maven
+ANT_HOME            DEFAULT=${HOME}/opt/apache-ant-1.8.2
+
+# Cinnober specific variables
+CVS_RSH             DEFAULT=ssh
+CVSROOT             DEFAUHLT=:ext:henrik.nordin@cvs.cinnober.com:/cvs/platform/
+
+BUILD_TOOLS_HOME    DEFAULT=${HOME}/opt/DeliveryBuildTools
+BUILD_TOOLS_USERID  DEFAULT=henrik.nordin
+
+# TODO Not working in arch linux
+PATH                DEFAULT=${HOME}/.local/bin:${GRADLE_HOME}/bin:${PATH}
+
+# vim: ft=dosini cms=#%s

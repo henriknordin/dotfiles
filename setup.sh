@@ -84,12 +84,11 @@ main() {
     create_link $dot/config/tmux .config/tmux
 
     check_shell "/bin/zsh"
-    create_link $dot/config/zsh/zshenv .zshenv
     create_link $dot/config/zsh .config/zsh
 
     create_link $dot/config/Xmodmap .Xmodmap
 
-    create_link $dot/config/xprofile .xprofile
+    create_link $dot/config/pam_environment .pam_environment
 }
 main
 

@@ -1,14 +1,5 @@
 
-# defaults
-export EDITOR="vim"
-export PAGER="less"
-
-# xdg - https://specifications.freedesktop.org/basedir-spec/latest/
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-
-# location of zsh config
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# Environment variables moved to .pam_environment in order to have a 
+# more shell agnostic setup
 
 # vim: ft=zsh cms=#%s

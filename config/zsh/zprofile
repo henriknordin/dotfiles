@@ -1,17 +1,10 @@
 
+# Only sourced by login shells. Hence, if $PATH is set in this file it's not set
+# when logging in through a DE such as LightDM. Also terminals such as termite.
+#
 # In archlinux, /etc/profile is sourced from /etc/zsh/zprofile causing the $PATH
 # to be overwritten if set in .zshenv
 #
 # See https://lists.archlinux.org/pipermail/arch-general/2013-March/033108.html
-#
-# However, note that this file is only sourced by login shells. In order to set
-# the path for interactive only shells, this file needs to be sourced by .zshrc
-
-typeset -U path
-path=(
-    $HOME/.local/bin
-    $HOME/Applications/sbt/bin
-    $path[@]
-)
 
 # vim: ft=zsh cms=#%s
