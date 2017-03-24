@@ -20,7 +20,7 @@ ANT_HOME            DEFAULT=${HOME}/opt/apache-ant-1.8.2
 
 # Cinnober specific variables
 CVS_RSH             DEFAULT=ssh
-CVSROOT             DEFAUHLT=:ext:henrik.nordin@cvs.cinnober.com:/cvs/platform/
+CVSROOT             DEFAULT=:ext:henrik.nordin\@cvs.cinnober.com:/cvs/platform/
 
 BUILD_TOOLS_HOME    DEFAULT=${HOME}/opt/DeliveryBuildTools
 BUILD_TOOLS_USERID  DEFAULT=henrik.nordin
