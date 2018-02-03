@@ -25,9 +25,6 @@
     set splitright                  " put hsplit right of the current
     set splitbelow                  " put vsplit below the current
 
-    " Haskell specific
-    autocmd FileType haskell setlocal expandtab shiftwidth=2 softtabstop=2
-
     " For markdown, allow line wrapping but do not break words apart
     autocmd BufRead,BufNewFile *.md set filetype=markdown
     autocmd BufRead,BufNewFile *.md set wrap
