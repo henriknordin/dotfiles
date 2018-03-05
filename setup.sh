@@ -64,7 +64,6 @@ is_shell_default() {
 # Main
 main() {
     local vim_plug_repo="https://raw.githubusercontent.com/junegunn/vim-plug"
-    #local vim_plug_branch="0.9.1" 
     local vim_plug_branch="master"
     local dot=$PROGDIR 
 
