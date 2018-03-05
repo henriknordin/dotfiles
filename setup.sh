@@ -79,6 +79,8 @@ main() {
 
     create_link $dot/config/sway .config/sway
 
+    create_link $dot/config/i3status .config/i3status
+    
     create_link $dot/config/redshift.conf .config/redshift.conf
 
     create_link $dot/config/termite .config/termite
