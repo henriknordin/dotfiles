@@ -88,8 +88,6 @@ main() {
     create_link $HOME/.config/zsh/zshenv .zshenv
 
     create_link $dot/config/Xmodmap .Xmodmap
-
-    create_link $dot/config/pam_environment .pam_environment
 }
 main
 
