@@ -77,6 +77,8 @@ main() {
         "$vim_plug_repo/$vim_plug_branch/plug.vim"
     create_link $dot/config/nvim .config/nvim
 
+    create_link $dot/config/sway .config/sway
+
     create_link $dot/config/redshift.conf .config/redshift.conf
 
     create_link $dot/config/termite .config/termite
