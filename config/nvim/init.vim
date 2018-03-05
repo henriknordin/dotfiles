@@ -6,7 +6,6 @@
 
 " https://github.com/neovim/neovim/wiki/FAQ
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 if filereadable(expand("~/.config/vim/vim-plug.init.vim"))
 	source ~/.config/vim/vim-plug.init.vim
