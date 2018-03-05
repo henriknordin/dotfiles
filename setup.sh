@@ -85,6 +85,7 @@ main() {
 
     check_shell "/bin/zsh"
     create_link $dot/config/zsh .config/zsh
+    create_link $HOME/.config/zsh/zshenv .zshenv
 
     create_link $dot/config/Xmodmap .Xmodmap
 
