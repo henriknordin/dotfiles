@@ -92,6 +92,8 @@ main() {
     create_link $HOME/.config/zsh/zshenv .zshenv
 
     create_link $dot/config/Xmodmap .Xmodmap
+
+    create_link $dot/bin bin
 }
 main
 

@@ -9,6 +9,7 @@
 
 typeset -U path
 path=(
+    $HOME/bin
     $HOME/.local/bin
     $HOME/Applications/sbt/bin
     $path[@]
