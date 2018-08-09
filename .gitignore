@@ -10,3 +10,6 @@ plugged/
 
 # zsh
 .zcompdump
+
+# vim/neovim
+.netrwhist
